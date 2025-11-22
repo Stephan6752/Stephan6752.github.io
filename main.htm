@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кравченко Стефан - Персональная страница</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .age {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .skill-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .hobby-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contacts {
+            text-align: center;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        
+        .gaming-icon, .music-icon, .friends-icon, .study-icon {
+            font-size: 1.5em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Кравченко Стефан</h1>
+            <p class="age">13 лет | Программист</p>
+        </header>
+
+        <section id="about">
+            <h2>1. Обо мне</h2>
+            <p>Привет! Меня зовут Стефан, мне 13 лет. Я увлекаюсь программированием и современными технологиями. Люблю изучать новое и создавать интересные проекты!</p>
+        </section>
+
+        <section id="skills">
+            <h2>2. Профессиональные навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <strong>Программирование</strong>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <strong>Разработка</strong>
+                    <p>Создание веб-страниц и приложений</p>
+                </div>
+                <div class="skill-item">
+                    <strong>Английский язык</strong>
+                    <p>Изучение и практика</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>3. Проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Веб-страницы</h3>
+                    <p>Создание персональных сайтов и HTML-страниц</p>
+                </div>
+                <div class="project-card">
+                    <h3>Учебные проекты</h3>
+                    <p>Разработка небольших приложений и игр</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>4. Хобби</h2>
+            <div class="hobby-item">
+                <span class="gaming-icon">🎮</span>
+                <div>
+                    <strong>Игры:</strong> RDR2, GTA5, GTA Vice City
+                </div>
+            </div>
+            <div class="hobby-item">
+                <span class="music-icon">🎵</span>
+                <div>
+                    <strong>Музыка:</strong> ICEGERGERT
+                </div>
+            </div>
+            <div class="hobby-item">
+                <span class="study-icon">📚</span>
+                <div>
+                    <strong>Обучение:</strong> Английский язык
+                </div>
+            </div>
+            <div class="hobby-item">
+                <span class="friends-icon">👥</span>
+                <div>
+                    <strong>Общение:</strong> С друзьями
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <h2>5. Контакты</h2>
+            <p class="contact-info">Для связи со мной:</p>
+            <p class="contact-info">(Здесь можно указать email, социальные сети или другие контакты)</p>
+        </section>
+    </div>
+
+    <script>
+        // Простой скрипт для плавной прокрутки
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Добавляем немного интерактивности
+        document.querySelectorAll('.skill-item, .project-card, .hobby-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
